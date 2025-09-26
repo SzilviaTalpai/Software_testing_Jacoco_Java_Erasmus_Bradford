@@ -1,0 +1,82 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+Enter your password: Password correct.
+A code was sent to your phone: 061994
+Enter the code: Enter your password: Password correct.
+A code was sent to your phone: 952240
+Enter the code: Push notification sent to your phone.
+Approve login? (yes/no): A code was sent to your phone: 172788
+Enter the code: Push notification sent to your phone.
+Approve login? (yes/no): Enter your password: Incorrect password. Attempts left: 2
+Enter your password: Enter your password: Password correct.
+[36m╷[0m
+[36m├─[0m [36mJUnit Platform Suite[0m [32m✔[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  ├─[0m [36mMultiStepAuthTest[0m [32m✔[0m
+[36m│  │  └─[0m [31mtestMultiAuthAllSuccess()[0m [31m✘[0m [31mNo line found[0m
+[36m│  ├─[0m [36mMFAFactoryTest[0m [32m✔[0m
+[36m│  │  ├─[0m [34mtestUnknownMethodThrowsException()[0m [32m✔[0m
+[36m│  │  ├─[0m [34mtestGetAppAuth()[0m [32m✔[0m
+[36m│  │  └─[0m [34mtestGetSMSAuth()[0m [32m✔[0m
+[36m│  ├─[0m [36mAuthenticationMethodTest[0m [32m✔[0m
+[36m│  │  ├─[0m [34mtestPasswordAuthCorrect()[0m [32m✔[0m
+[36m│  │  ├─[0m [34mtestSMSAuthIncorrectCode()[0m [32m✔[0m
+[36m│  │  ├─[0m [34mtestAppAuthDenied()[0m [32m✔[0m
+[36m│  │  ├─[0m [31mtestSMSAuthCorrectCode()[0m [31m✘[0m [31mexpected: <true> but was: <false>[0m
+[36m│  │  ├─[0m [34mtestAppAuthApproval()[0m [32m✔[0m
+[36m│  │  └─[0m [31mtestPasswordAuthIncorrect()[0m [31m✘[0m [31mNo line found[0m
+[36m│  └─[0m [36mUserTest[0m [32m✔[0m
+[36m│     └─[0m [34mtestUserAuthenticationSuccess()[0m [32m✔[0m
+[36m└─[0m [36mJUnit Vintage[0m [32m✔[0m
+
+Failures (3):
+  JUnit Jupiter:MultiStepAuthTest:testMultiAuthAllSuccess()
+    MethodSource [className = 'Tests.MultiStepAuthTest', methodName = 'testMultiAuthAllSuccess', methodParameterTypes = '']
+    => java.util.NoSuchElementException: No line found
+       java.base/java.util.Scanner.nextLine(Scanner.java:1660)
+       mfa_authentication.SMSAuth.authenticate(SMSAuth.java:19)
+       mfa_authentication.MultiStepAuth.authenticate(MultiStepAuth.java:33)
+       mfa_authentication.User.authenticate(User.java:48)
+       Tests.MultiStepAuthTest.testMultiAuthAllSuccess(MultiStepAuthTest.java:13)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+  JUnit Jupiter:AuthenticationMethodTest:testSMSAuthCorrectCode()
+    MethodSource [className = 'Tests.AuthenticationMethodTest', methodName = 'testSMSAuthCorrectCode', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+       Tests.AuthenticationMethodTest.testSMSAuthCorrectCode(AuthenticationMethodTest.java:23)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+  JUnit Jupiter:AuthenticationMethodTest:testPasswordAuthIncorrect()
+    MethodSource [className = 'Tests.AuthenticationMethodTest', methodName = 'testPasswordAuthIncorrect', methodParameterTypes = '']
+    => java.util.NoSuchElementException: No line found
+       java.base/java.util.Scanner.nextLine(Scanner.java:1660)
+       mfa_authentication.PasswordAuth.authenticate(PasswordAuth.java:26)
+       mfa_authentication.User.authenticate(User.java:48)
+       Tests.AuthenticationMethodTest.testPasswordAuthIncorrect(AuthenticationMethodTest.java:78)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+Test run finished after 6153 ms
+[         7 containers found      ]
+[         0 containers skipped    ]
+[         7 containers started    ]
+[         0 containers aborted    ]
+[         7 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         3 tests failed          ]
+
